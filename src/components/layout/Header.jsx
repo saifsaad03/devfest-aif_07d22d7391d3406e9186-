@@ -9,13 +9,19 @@ export default function Header({ onReset }) {
 
   return (
     <header className="app-header">
-      <div>
-        <h1>{t('app.title')}</h1>
-        <p className="subtitle">{t('app.tagline')}</p>
+      <div className="brand">
+        <div className="brand-mark" aria-hidden="true">
+          T
+        </div>
+        <div className="brand-text">
+          <h1>{t('app.title')}</h1>
+          <p className="subtitle">{t('app.tagline')}</p>
+        </div>
       </div>
       <div className="header-right">
         <span className={`tender-chip ${loaded ? '' : 'empty'}`}>
-          {t('header.tenderId')}: {loaded ? tenderId || '—' : t('header.noTenderId')}
+          {t('header.tenderId')}:{' '}
+          <strong>{loaded ? tenderId || '—' : t('header.noTenderId')}</strong>
         </span>
         <LangToggle />
         <button type="button" className="btn btn-sm btn-danger" onClick={onReset}>

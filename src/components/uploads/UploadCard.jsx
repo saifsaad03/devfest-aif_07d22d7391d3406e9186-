@@ -56,8 +56,7 @@ export default function UploadCard({ upload, unmatched }) {
 
         <button
           type="button"
-          className="btn btn-sm btn-danger"
-          style={{ marginLeft: 'auto' }}
+          className="btn btn-sm btn-danger push-right"
           onClick={() => removeUpload(upload.fileId)}
         >
           {t('upload.remove')}
