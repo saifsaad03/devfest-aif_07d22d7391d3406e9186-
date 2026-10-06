@@ -1,0 +1,59 @@
+{
+  "tender_id": "TND-2026-001",
+  "documents": [
+    {
+      "id": "doc-01",
+      "title_en": "Trade License",
+      "title_bn": "ট্রেড লাইসেন্স",
+      "required": true,
+      "has_expiry": true,
+      "order": 1,
+      "match_keywords": ["trade license", "ত্রেড লাইসেন্স"]
+    },
+    {
+      "id": "doc-02",
+      "title_en": "Tax Identification Number (TIN Certificate)",
+      "title_bn": "ট্যাক্স আইডেন্টিফিকেশন নম্বর (টিআইএন সার্টিফিকেট)",
+      "required": true,
+      "has_expiry": false,
+      "order": 2,
+      "match_keywords": ["tin", "tax identification", "টিআইএন"]
+    },
+    {
+      "id": "doc-03",
+      "title_en": "VAT Registration Certificate",
+      "title_bn": "ভ্যাট নিবন্ধন সনদ",
+      "required": true,
+      "has_expiry": false,
+      "order": 3,
+      "match_keywords": ["vat registration", "vat certificate", "ভ্যাট"]
+    },
+    {
+      "id": "doc-04",
+      "title_en": "Company Profile",
+      "title_bn": "কোম্পানি প্রোফাইল",
+      "required": true,
+      "has_expiry": false,
+      "order": 4,
+      "match_keywords": ["company profile", "profile", "প্রোফাইল"]
+    },
+    {
+      "id": "doc-05",
+      "title_en": "Bank Solvency Certificate",
+      "title_bn": "ব্যাংক সার্ভেন্সি সার্টিফিকেট",
+      "required": true,
+      "has_expiry": true,
+      "order": 5,
+      "match_keywords": ["solvency", "bank solvency", "সার্ভেন্সি"]
+    },
+    {
+      "id": "doc-06",
+      "title_en": "Performance Certificate",
+      "title_bn": "পারফরম্যান্স সার্টিফিকেট",
+      "required": false,
+      "has_expiry": false,
+      "order": 6,
+      "match_keywords": ["performance certificate", "performance", "পারফরম্যান্স"]
+    }
+  ]
+}

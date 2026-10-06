@@ -1,0 +1,54 @@
+import { useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
+import { useDropzone } from 'react-dropzone';
+import { useFileUpload } from '../../hooks/useFileUpload.js';
+import { useRequirementsStore } from '../../store/useRequirementsStore.js';
+import UploadList from './UploadList.jsx';
+import DuplicateWarning from '../status/DuplicateWarning.jsx';
+
+export default function FileDropzone() {
+  const { t } = useTranslation();
+  const { handleFiles, parsing } = useFileUpload();
+  const loaded = useRequirementsStore((s) => s.loaded);
+
+  const onDrop = useCallback(
+    (accepted, rejected) => {
+      if (rejected?.length) {
+        handleFiles(rejected.map((r) => r.file));
+      }
+      if (accepted?.length) handleFiles(accepted);
+    },
+    [handleFiles]
+  );
+
+  const { getRootProps, getInputProps, isDragActive } = useDropzone({
+    onDrop,
+    noClick: parsing,
+    disabled: parsing,
+    multiple: true,
+    validator: (file) =>
+      file.type === 'application/pdf' || /\.pdf$/i.test(file.name)
+        ? null
+        : { code: 'non-pdf', message: t('upload.onlyPdf') },
+  });
+
+  return (
+    <section className="card">
+      <h2>{t('upload.step')}</h2>
+      <p className="section-hint">{t('upload.memoryNote')}</p>
+
+      <div {...getRootProps({ className: `dropzone ${isDragActive ? 'active' : ''}` })}>
+        <input {...getInputProps()} />
+        <div className="drop-main">
+          {parsing ? t('upload.parsing') : t('upload.dropzone')}
+        </div>
+        <div className="drop-sub">{t('upload.onlyPdf')}</div>
+      </div>
+
+      {!loaded && <div className="info-note">{t('requirements.empty')}</div>}
+
+      <DuplicateWarning />
+      <UploadList />
+    </section>
+  );
+}

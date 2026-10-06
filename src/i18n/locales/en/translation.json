@@ -1,0 +1,75 @@
+{
+  "app": {
+    "title": "Tender Document Package Builder",
+    "tagline": "Build a complete, ordered tender document package in your browser"
+  },
+  "header": {
+    "tenderId": "Tender ID",
+    "noTenderId": "No requirements loaded",
+    "reset": "Reset all"
+  },
+  "requirements": {
+    "step": "Step 1 — Requirements",
+    "loadFile": "Load requirements.json",
+    "dropHint": "Drop requirements.json here or click to browse",
+    "pasteLabel": "Or paste JSON",
+    "load": "Load",
+    "clear": "Clear",
+    "empty": "No requirements loaded yet.",
+    "invalid": "Invalid requirements JSON: {{msg}}",
+    "loaded": "Loaded {{count}} required documents",
+    "required": "Required",
+    "optional": "Optional",
+    "hasExpiry": "Has expiry",
+    "expiryDate": "Expiry date",
+    "order": "Order",
+    "clickToLoadSample": "Load sample"
+  },
+  "upload": {
+    "step": "Step 2 — Upload documents",
+    "dropzone": "Drag & drop PDF files here, or click to browse",
+    "onlyPdf": "Only PDF files are allowed",
+    "notPdf": "{{name}} is not a PDF file and was rejected.",
+    "empty": "No files uploaded yet.",
+    "parsing": "Reading PDFs…",
+    "pageCount": "{{count}} page(s)",
+    "assign": "Assigned to",
+    "assignPlaceholder": "— Not matched —",
+    "manual": "manual",
+    "auto": "auto",
+    "expiry": "Expiry date",
+    "remove": "Remove",
+    "memoryNote": "Files are kept in memory only and disappear on refresh."
+  },
+  "status": {
+    "MISSING": "Missing",
+    "EXPIRY_NEEDED": "Expiry date needed",
+    "EXPIRED": "Expired",
+    "NOT_PROVIDED": "Not provided",
+    "OK": "OK",
+    "DUPLICATE": "Duplicate content",
+    "ready": "Package ready — {{ok}}/{{total}} documents OK",
+    "blocked": "{{count}} blocking issue(s)",
+    "unmatchedTitle": "Unmatched uploads",
+    "unmatchedHint": "These files are not matched to any requirement. They will not be included in the package."
+  },
+  "generate": {
+    "button": "Generate Package",
+    "blocked": "Resolve all blocking issues to generate",
+    "working": "Generating…",
+    "done": "Package generated: {{name}}",
+    "error": "Generation failed: {{msg}}",
+    "coverTitle": "TENDER DOCUMENT PACKAGE",
+    "coverSubtitle": "Documents submitted in response to tender",
+    "coverTender": "Tender ID",
+    "coverDate": "Generated on",
+    "coverIndex": "Document Index",
+    "included": "Included documents"
+  },
+  "common": {
+    "close": "Close",
+    "confirmReset": "Clear requirements, uploads and expiry data?",
+    "cancel": "Cancel",
+    "confirm": "Confirm"
+  }
+}
